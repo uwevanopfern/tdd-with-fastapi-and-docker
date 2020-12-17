@@ -3,7 +3,7 @@ name: Continuous Integration and Delivery
 on: [push]
 
 env:
-  IMAGE: docker.pkg.github.com/$GITHUB_REPOSITORY/web_two
+  IMAGE: docker.pkg.github.com/$GITHUB_REPOSITORY/summarizer
 
 jobs:
   build:
@@ -92,7 +92,7 @@ jobs:
     needs: [build, test]
     env:
       HEROKU_APP_NAME: whispering-dawn-74038
-      HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/web_two
+      HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/summarizer
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
