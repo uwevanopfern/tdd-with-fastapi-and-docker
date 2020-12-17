@@ -53,7 +53,7 @@ def test_read_summary(test_app_with_db):
     response_dict = response.json()
     assert response_dict["id"] == summary_id
     assert response_dict["url"] == "https://foo.bar"
-    assert response_dict["summary"] == "Another Great summary, I am telling you"
+    assert response_dict["summary"] == "Another Great summary, Am telling you"
     assert response_dict["created_at"]
 
 
