@@ -1,7 +1,6 @@
 import logging
 import os
 from functools import lru_cache
-
 from pydantic import AnyUrl, BaseSettings
 
 log = logging.getLogger(__name__)
