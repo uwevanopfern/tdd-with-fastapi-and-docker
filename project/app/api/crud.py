@@ -20,7 +20,7 @@ async def get(id: int) -> Union[dict, None]:
 
 
 async def get_all() -> List:
-    summaries = await TextSummary.all().order_by('-id').values()
+    summaries = await TextSummary.all().order_by("-id").values()
     return summaries
 
 
